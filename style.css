@@ -1,98 +1,98 @@
-body{
-    background-color: hsl(0, 0%, 98%);
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-size: 15px;
-
+body {
+  background-color: hsl(0, 0%, 98%);
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: hsl(234, 12%, 34%);
 }
 
-.container{
-    display:flex;
-    flex-direction: column;
-    font-family: "Poppins", sans-serif;
-    align-content: center;
-    justify-content: center;
-    width:300px;
-    font-size: 14px;
-    }
-
-.title{
-    font-weight: 600;
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-
-/* This changes the layout for screens wider than 48em */
-@media (min-width: 48em) {
-#container {
-    display: flex; 
-    flex-direction: row;
-    max-width: 1440px;
-    padding: 0;
-    border-radius: 15px;
-}}
-
-#container .header-img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px 15px 0 0;
+.intro {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto 40px;
 }
 
-#container p {
-    padding: 0 20px;
+.intro .light {
+  font-weight: 200;
+  margin: 0;
+  font-size: 22px;
 }
-#container p#light {
-    font-family: "Poppins Light", sans-serif;
-    font-weight: 200;
-    font-size: 18px;
-    margin-top: 20px;
+
+.intro h1 {
+  margin: 8px 0 12px;
+  font-size: 24px;
+  font-weight: 600;
 }
-#container p:nth-child(3) {
-    font-family: "Poppins Medium", sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    margin-top: 10px;
+
+.intro .desc {
+  margin: 0;
+  color: hsl(229, 6%, 66%);
+  line-height: 1.6;
 }
-#container p:nth-child(4) {
-    font-family: "Poppins SemiBold", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    margin-top: 20px;
+
+.cards {
+  display: grid;
+  gap: 20px;
 }
+
+/* card base */
 .card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    flex: 1;
-    border: 1px solid black;
-    border-radius: 3px;
-    margin-bottom: 15px;
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-top: 4px solid transparent;
 }
 
-
-@font-face {
-font-family: "Poppins Light";
-src: url('fonts\Poppins\Poppins-Light.ttf') format("truetype");
-font-weight: 200;
-font-style: normal;
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
 }
 
-
-@font-face {
-font-family: "Poppins Medium";
-src: url('fonts\Poppins\Poppins-Medium.ttf') format("truetype");
-font-weight: 400;
-font-style: normal;
+.card p {
+  margin: 0;
+  color: hsl(229, 6%, 66%);
+  line-height: 1.6;
 }
 
-@font-face {
-font-family: "Poppins SemiBold";
-src: url('fonts\Poppins\Poppins-SemiBold.ttf') format("truetype");
-font-weight: 600;
-font-style: normal;
+/* top border colors */
+.supervisor { border-top-color: hsl(180, 62%, 55%); }
+.team { border-top-color: hsl(0, 78%, 62%); }
+.karma { border-top-color: hsl(34, 97%, 64%); }
+.calculator { border-top-color: hsl(212, 86%, 64%); }
+
+/* Desktop layout */
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  .supervisor {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .team {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .karma {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .calculator {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .intro h1 { font-size: 32px; }
 }
