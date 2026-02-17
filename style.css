@@ -1,0 +1,22 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    align-content: center;
+    justify-content: center;
+    width:300px;
+    font-size: 14px;
+    }
+
+.title{
+    font-weight: 600;
+}
+.sect{
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
