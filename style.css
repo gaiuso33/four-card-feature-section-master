@@ -1,3 +1,14 @@
+body{
+    background-color: hsl(0, 0%, 98%);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 15px;
+
+}
+
 .container{
     display:flex;
     flex-direction: column;
@@ -11,12 +22,77 @@
 .title{
     font-weight: 600;
 }
-.sect{
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+/* This changes the layout for screens wider than 48em */
+@media (min-width: 48em) {
+#container {
+    display: flex; 
+    flex-direction: row;
+    max-width: 1440px;
+    padding: 0;
+    border-radius: 15px;
+}}
+
+#container .header-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+}
+
+#container p {
+    padding: 0 20px;
+}
+#container p#light {
+    font-family: "Poppins Light", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    margin-top: 20px;
+}
+#container p:nth-child(3) {
+    font-family: "Poppins Medium", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 10px;
+}
+#container p:nth-child(4) {
+    font-family: "Poppins SemiBold", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
     border: 1px solid black;
     border-radius: 3px;
     margin-bottom: 15px;
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+@font-face {
+font-family: "Poppins Light";
+src: url('fonts\Poppins\Poppins-Light.ttf') format("truetype");
+font-weight: 200;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: "Poppins Medium";
+src: url('fonts\Poppins\Poppins-Medium.ttf') format("truetype");
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: "Poppins SemiBold";
+src: url('fonts\Poppins\Poppins-SemiBold.ttf') format("truetype");
+font-weight: 600;
+font-style: normal;
+}
